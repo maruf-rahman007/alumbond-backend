@@ -1,0 +1,1 @@
+// All type of request that include posts
