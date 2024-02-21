@@ -1,5 +1,15 @@
+require('dotenv').config()
+
 const mongoose = require('mongoose')
 
-mongoose.connect('url')
-
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(()=>{
+    console.log("Mongodb connected")
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
 // Define all the Schemas
